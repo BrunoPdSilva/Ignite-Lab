@@ -4,8 +4,6 @@ import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
-
-
 export function Subscribe() {
   const navigate = useNavigate()
 
@@ -18,7 +16,7 @@ export function Subscribe() {
     e.preventDefault();
 
     await createSubscriber({ variables: { name, email } })
-    navigate('/event')
+    navigate('/event/lesson/abertura')
   }
 
   return (
